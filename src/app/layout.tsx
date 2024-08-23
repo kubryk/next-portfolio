@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Ubuntu } from "next/font/google";
 import "./globals.css";
+import Header from "@/custom-components/Header";
+import Projects from "@/custom-components/Projects";
+import Skills from "@/custom-components/Skills";
+import Contact from "@/custom-components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ['400'] });
+// const roboto = Roboto({ subsets: ["latin"], weight: ['700'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ubuntu.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
