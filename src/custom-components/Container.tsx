@@ -1,8 +1,11 @@
-import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { HTMLAttributes, ReactNode } from "react";
 
-const Container = ({ children }: { children: ReactNode }) => {
+interface ContainerProps extends HTMLAttributes<HTMLDivElement> { }
+
+const Container = ({ children, className }: ContainerProps) => {
     return (
-        <div className=" my-0 mx-auto max-w-screen-xl px-4 h-full">
+        <div className={cn('my-0 mx-auto max-w-screen-xl px-4 h-full', className)}>
             {children}
         </div>
     );

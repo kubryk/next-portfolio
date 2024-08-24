@@ -21,7 +21,7 @@ import { SiRedux } from "react-icons/si";
 
 const Skills = () => {
     return (
-        <section className="h-auto pt-[10px] pb-[200px]">
+        <section className="h-auto pt-[10px] pb-[150px]">
             <Container>
                 <div className="flex flex-col items-center gap-14">
                     <h2 className="text-3xl font-bold text-center uppercase">Technologies</h2>

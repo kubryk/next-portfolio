@@ -20,8 +20,9 @@ const Header = () => {
                 <div className="flex gap-20 justify-center items-center">
                     <ul className="flex justify-center gap-8 text-[15px] uppercase">
                         <li><Link href="/">About</Link></li>
-                        <li><a href="#bottom">Projects</a></li>
                         <li><a href="/">Skills</a></li>
+                        <li><a href="/">Projects</a></li>
+                        <li><a href="/">Contact</a></li>
                     </ul>
                     <ThemeToggle />
                 </div>
