@@ -2,7 +2,7 @@ import Container from "./Container";
 
 const Skills = () => {
     return (
-        <section>
+        <section className="h-screen w-screen">
             <Container>
                 <h2>Skills</h2>
                 <ul className="grid grid-cols-3 gap-5">

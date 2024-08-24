@@ -1,11 +1,16 @@
 'use client'
+import { MdSunny } from "react-icons/md";
+import { IoIosMoon } from "react-icons/io";
 import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-    const [darkTheme, setDarkTheme] = useState<boolean>(true);
+    const [darkTheme, setDarkTheme] = useState<boolean>(false);
 
     useEffect(() => {
-        localStorage.getItem("theme") === "dark" ? setDarkTheme(true) : setDarkTheme(false);
+
+        if (localStorage.getItem("theme") === "dark" || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDarkTheme(true);
+        }
     }, []);
 
     useEffect(() => {
@@ -16,14 +21,15 @@ const ThemeToggle = () => {
             document.documentElement.classList.remove("dark");
             localStorage.setItem("theme", "light");
         }
-
-        console.log(darkTheme)
     }, [darkTheme]);
 
     return (
-        <button onClick={() => setDarkTheme(prev => !prev)}>
-            Toggle Theme
-        </button>
+        <>
+            {darkTheme ?
+                <MdSunny className=" cursor-pointer" onClick={() => setDarkTheme(!darkTheme)} size={25} /> :
+                <IoIosMoon className=" cursor-pointer" onClick={() => setDarkTheme(!darkTheme)} size={25} />
+            }
+        </>
     )
 }
 

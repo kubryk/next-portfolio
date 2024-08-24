@@ -19,11 +19,11 @@ const Preview = () => {
                         <p className=" text-center">With a passion for developing modern React web apps for commercial businesses.</p>
                     </div>
 
-                    <div className=" relative">
+                    <div className="relative ">
                         <svg className=" w-[340px] h-[340px]">
-                            <path className=" fill-transparent" id="curve" d=" M 320 170 A 150 150 0 1 1 320 165" />
-                            <text className="origin-center animate-spin duration-10000">
-                                <textPath href="#curve">
+                            <path className=" fill-transparent " id="curve" d=" M 320 170 A 150 150 0 1 1 320 165" />
+                            <text className="origin-center animate-spin duration-10000 transition-colors">
+                                <textPath className="dark:fill-white" href="#curve">
                                     | HTML | CSS | SCSS | JavaScript | Typescript | React | Next.js | Node.js | Express | MongoDB | PostgreSQL | Redux | Tailwind | SEO |
                                 </textPath>
                             </text>
