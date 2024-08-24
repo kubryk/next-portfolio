@@ -6,7 +6,7 @@ import Projects from "@/custom-components/Projects";
 import Skills from "@/custom-components/Skills";
 import Contact from "@/custom-components/Contact";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ['400'] });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ubuntu.className}>
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>

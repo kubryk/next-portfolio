@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        'xsm': '320px',
+      },
+      transitionDuration: {
+        '10000': "10000ms",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
