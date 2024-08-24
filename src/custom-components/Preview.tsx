@@ -1,11 +1,13 @@
+'use client'
 import Container from "./Container";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion"
 
 const Preview = () => {
     return (
-        <section className=" w-screen h-screen sm:pt-[80px] xsm:pt-[80px]">
+        <section className=" h-screen sm:pt-[80px] xsm:pt-[80px]">
             <Container>
                 <div className="flex flex-col items-center justify-evenly w-full h-[90%] md:flex-row md:gap-5">
 

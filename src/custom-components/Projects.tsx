@@ -2,7 +2,7 @@ import Container from "./Container";
 
 const Projects = () => {
     return (
-        <section className="bg-blue-300 h-screen w-screen">
+        <section className="bg-blue-300 h-screen">
             <Container>
                 <h2 className="text-[30px]">Projects</h2>
                 <ul className="flex gap-5 py-4 text-[20px]">
