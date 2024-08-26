@@ -42,7 +42,7 @@ const Projects = () => {
                 <ul className="flex flex-wrap justify-center gap-4 py-4 text-[20px]">
                     {myProjects && myProjects.map(project => {
                         return (
-                            <li className="flex flex-col gap-1">
+                            <li key={project.image} className="flex flex-col gap-1">
                                 <div className=" w-[300px] h-[300px] bg-slate-500 rounded-xl shadow-2xl">
                                     {/* <Image
                                         className=" rounded-xl"
