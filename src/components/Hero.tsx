@@ -5,20 +5,22 @@ import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion"
 
-const Preview = () => {
+const Hero = () => {
     return (
-        <section className=" h-screen sm:pt-[80px] xsm:pt-[80px]">
+        // <section className="h-screen sm:pt-[80px] xsm:pt-[80px]">
+        <section className="h-screen">
+
             <Container>
                 <div className="flex flex-col items-center justify-evenly w-full h-[90%] md:flex-row md:gap-5">
 
-                    <div className="flex flex-col gap-3 items-center max-w-[350px] p-3">
-                        <h1 className="text-[50px] font-bold text-center uppercase xsm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl  ">Yaroslav Havryliuk</h1>
-                        <h2 className="text-[20px] text-center font-thin uppercase">Full Stack Developer</h2>
-                        <span className="flex gap-3">
+                    <div className="flex flex-col gap-3 p-3">
+                        <h1 className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">Hi, it's <span className=" text-indigo-500">Yaroslav</span></h1>
+                        <h2 className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">I'm a <span className=" text-indigo-500">Full Stack Developer</span></h2>
+                        <p className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">With a passion for developing modern React web apps for commercial businesses.</p>
+                        <span className="flex gap-3 xsm:justify-center sm:justify-center md:justify-start">
                             <Link href="/"><FaGithubSquare size={35} /></Link>
                             <Link href="/"><FaLinkedin size={35} /></Link>
                         </span>
-                        <p className=" text-center">With a passion for developing modern React web apps for commercial businesses.</p>
                     </div>
 
                     <div className="relative ">
@@ -39,4 +41,4 @@ const Preview = () => {
     );
 }
 
-export default Preview;
+export default Hero;

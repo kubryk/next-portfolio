@@ -13,8 +13,10 @@ const Contact = () => {
     const { form: { register, formState, handleSubmit }, onSubmit, sendMessage } = useContactForm();
 
     return (
-        <section className="pb-[200px]">
-            <Container className="flex flex-col items-center gap-10">
+        // <section className="pb-[200px]">
+        <section>
+
+            <Container className="flex flex-col items-center gap-6">
                 <h2 className="text-3xl font-bold text-center uppercase">Contact</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.form} >
                     <input
