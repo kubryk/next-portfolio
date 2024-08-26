@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion"
+import Button from "./ui/Button";
 
 const Hero = () => {
     return (
-        <section className="h-screen">
+        <section className="h-screen p">
             <Container>
                 <div className="flex flex-col items-center justify-evenly w-full h-[90%] md:flex-row md:gap-5">
 
@@ -15,10 +16,13 @@ const Hero = () => {
                         <h1 className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">Hi, it&apos;s <span className=" text-indigo-500">Yaroslav</span></h1>
                         <h2 className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">I&apos;m a <span className=" text-indigo-500">Full Stack Developer</span></h2>
                         <p className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">With a passion for developing modern React web apps for commercial businesses.</p>
-                        <span className="flex gap-3 xsm:justify-center sm:justify-center md:justify-start">
+                        {/* <span className="flex gap-3 xsm:justify-center sm:justify-center md:justify-start">
                             <Link href="/"><FaGithubSquare size={35} /></Link>
                             <Link href="/"><FaLinkedin size={35} /></Link>
-                        </span>
+                        </span> */}
+                        <Button className=" px-0">
+                            Hire me
+                        </Button>
                     </div>
 
                     <div className="relative ">

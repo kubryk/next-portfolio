@@ -2,18 +2,18 @@
 //Styles
 import styles from './Contact.module.css';
 import { cn } from "@/lib/utils";
-
 //Components
 import Container from "../Container";
-
+import Button from '../ui/Button';
 import { PulseLoader } from "react-spinners";
+//Hooks
 import useContactForm from '../../hooks/useContactForm';
+
 
 const Contact = () => {
     const { form: { register, formState, handleSubmit }, onSubmit, sendMessage } = useContactForm();
 
     return (
-        // <section className="pb-[200px]">
         <section>
 
             <Container className="flex flex-col items-center gap-6">
@@ -42,9 +42,9 @@ const Contact = () => {
                     />
                     {formState.errors.message && <span className=" text-red-600">{formState.errors.message.message}</span>}
 
-                    <button disabled={sendMessage.isPending} className={styles.button}>
+                    <Button disabled={sendMessage.isPending}>
                         {sendMessage.isPending ? <PulseLoader color="white" size={20} /> : 'Send'}
-                    </button>
+                    </Button>
                 </form>
             </Container>
         </section>

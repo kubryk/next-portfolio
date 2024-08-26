@@ -11,11 +11,13 @@ const queryClient = new QueryClient();
 export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
-      <main className="flex flex-col gap-20">
+      <main>
         <Hero />
-        <Projects />
-        <Technologies />
-        <Contact />
+        <div className="flex flex-col xsm:gap-10 md:gap-24">
+          <Projects />
+          <Technologies />
+          <Contact />
+        </div>
       </main>
     </QueryClientProvider>
   );
