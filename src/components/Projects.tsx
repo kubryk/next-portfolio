@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Container from "./Container";
 import Image from "next/image";
+import { useContext } from "react";
+import { NavigationContext } from "@/context/NavigationContext";
 
 
 const myProjects = [{
@@ -24,19 +26,14 @@ const myProjects = [{
     view: '/',
     image: '/'
 },
-    // {
-    //     name: 'Rust Game Server Website',
-    //     description: 'Game server website ',
-    //     github: '/',
-    //     view: '/',
-    //     image: '/'
-    // },
 ];
 
 
 const Projects = () => {
+    const sections = useContext(NavigationContext);
+
     return (
-        <section>
+        <section ref={sections?.find(section => section.name === 'Projects')?.ref}>
             <Container className=" flex flex-col items-center gap-6">
                 <h2 className="text-3xl font-bold text-center uppercase">Projects</h2>
                 <ul className="flex flex-wrap justify-center gap-4 py-4 text-[20px]">

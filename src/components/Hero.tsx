@@ -5,10 +5,13 @@ import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion"
 import Button from "./ui/Button";
+import { NavigationContext } from "@/context/NavigationContext";
+import { useContext } from "react";
 
 const Hero = () => {
+    const sections = useContext(NavigationContext);
     return (
-        <section className="h-screen p">
+        <section ref={sections?.find(section => section.name === 'About')?.ref} className="h-screen p">
             <Container>
                 <div className="flex flex-col items-center justify-evenly w-full h-[90%] md:flex-row md:gap-5">
 

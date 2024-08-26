@@ -8,14 +8,16 @@ import Button from '../ui/Button';
 import { PulseLoader } from "react-spinners";
 //Hooks
 import useContactForm from '../../hooks/useContactForm';
+import { useContext } from 'react';
+import { NavigationContext } from '@/context/NavigationContext';
 
 
 const Contact = () => {
     const { form: { register, formState, handleSubmit }, onSubmit, sendMessage } = useContactForm();
+    const sections = useContext(NavigationContext);
 
     return (
-        <section>
-
+        <section ref={sections?.find(section => section.name === 'Contact')?.ref}>
             <Container className="flex flex-col items-center gap-6">
                 <h2 className="text-3xl font-bold text-center uppercase">Contact</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.form} >

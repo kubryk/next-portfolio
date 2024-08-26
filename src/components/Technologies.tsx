@@ -18,10 +18,14 @@ import { SiReacthookform } from "react-icons/si";
 
 import { SiReactquery } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
+import { useContext } from "react";
+import { NavigationContext } from "@/context/NavigationContext";
 
 const Technologies = () => {
+    const sections = useContext(NavigationContext);
+
     return (
-        <section>
+        <section ref={sections?.find(section => section.name === 'Technologies')?.ref}>
             <Container className="flex flex-col items-center gap-6">
 
                 <h2 className="text-3xl font-bold text-center uppercase">Technologies</h2>
