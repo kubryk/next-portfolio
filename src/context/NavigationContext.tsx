@@ -1,5 +1,5 @@
 'use client'
-import { createContext, MutableRefObject, ReactNode, Ref, useRef } from 'react';
+import { createContext, MutableRefObject, ReactNode, useRef } from 'react';
 
 interface INavigationContext {
     name: string
@@ -19,7 +19,7 @@ const NavigationContextProvider = ({ children }: { children: ReactNode }) => {
             ref: useRef<HTMLDivElement | null>(null)
         },
         {
-            name: 'Technologies',
+            name: 'Skills',
             ref: useRef<HTMLDivElement | null>(null)
         },
         {

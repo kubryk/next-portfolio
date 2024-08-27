@@ -21,14 +21,14 @@ import { SiRedux } from "react-icons/si";
 import { useContext } from "react";
 import { NavigationContext } from "@/context/NavigationContext";
 
-const Technologies = () => {
+const Skills = () => {
     const sections = useContext(NavigationContext);
 
     return (
-        <section ref={sections?.find(section => section.name === 'Technologies')?.ref}>
+        <section ref={sections?.find(section => section.name === 'Skills')?.ref}>
             <Container className="flex flex-col items-center gap-6">
 
-                <h2 className="text-3xl font-bold text-center uppercase">Technologies</h2>
+                <h2 className="text-3xl font-bold text-center uppercase">Skills</h2>
                 <ul className="grid xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 lg:grid-rows-2 gap-5">
                     <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center ">
                         <TbBrandTypescript className=" text-cyan-400" size={50} />
@@ -78,4 +78,4 @@ const Technologies = () => {
     );
 }
 
-export default Technologies;
+export default Skills;

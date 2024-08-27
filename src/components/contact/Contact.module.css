@@ -1,7 +1,0 @@
-.form {
-    @apply flex flex-col gap-5 items-center ;
-}
-
-.field {
-    @apply focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-500 dark:bg-slate-800 dark:text-gray-300 border-2 outline-none shadow-none border-gray-300 rounded-xl p-2 text-gray-600 xsm:min-w-[300px] sm:min-w-[400px] md:min-w-[600px] lg:min-w-[700px];
-}
