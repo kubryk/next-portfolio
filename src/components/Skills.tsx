@@ -12,21 +12,21 @@ import { NavigationContext } from "@/context/NavigationContext";
 import { motion } from "framer-motion";
 
 
-const skills = [,
-    <TbBrandTypescript className=" text-cyan-400" size={50} />,
-    <FaNodeJs className=" text-green-500" size={50} />,
-    <RiReactjsLine className=" text-cyan-400" size={50} />,
-    <SiNextdotjs size={50} />,
-    <RiHtml5Fill className=" text-orange-600" size={50} />,
-    <FaCss3Alt className=" text-cyan-500" size={50} />,
-    <BsFiletypeScss className=" text-pink-400" size={50} />,
-    <RiTailwindCssFill className=" text-cyan-400" size={50} />,
-    <SiRedux className=" text-purple-600" size={50} />,
-    <SiReactquery className=" text-red-500" size={50} />,
-    <BiLogoPostgresql className=" text-cyan-400" size={50} />,
-    <SiMongodb className=" text-green-500" size={50} />,
-    <BiLogoGit className=" text-red-700" size={50} />,
-    <SiReacthookform className=" text-pink-600" size={50} />
+const skills = [
+    { key: 1, icon: <TbBrandTypescript className=" text-cyan-400" size={50} /> },
+    { key: 2, icon: <FaNodeJs className=" text-green-500" size={50} /> },
+    { key: 3, icon: <RiReactjsLine className=" text-cyan-400" size={50} /> },
+    { key: 4, icon: <SiNextdotjs size={50} /> },
+    { key: 5, icon: <RiHtml5Fill className=" text-orange-600" size={50} /> },
+    { key: 6, icon: <FaCss3Alt className=" text-cyan-500" size={50} /> },
+    { key: 7, icon: <BsFiletypeScss className=" text-pink-400" size={50} /> },
+    { key: 8, icon: <RiTailwindCssFill className=" text-cyan-400" size={50} /> },
+    { key: 9, icon: <SiRedux className=" text-purple-600" size={50} /> },
+    { key: 10, icon: <SiReactquery className=" text-red-500" size={50} /> },
+    { key: 11, icon: <BiLogoPostgresql className=" text-cyan-400" size={50} /> },
+    { key: 12, icon: <SiMongodb className=" text-green-500" size={50} /> },
+    { key: 13, icon: <BiLogoGit className=" text-red-700" size={50} /> },
+    { key: 14, icon: <SiReacthookform className=" text-pink-600" size={50} /> }
 ]
 
 const Skills = () => {
@@ -42,13 +42,13 @@ const Skills = () => {
                     {skills.map((skill, index) => {
                         return (
                             <motion.li
+                                key={skill.key}
                                 initial={{ x: -100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: index * 0.1 }}
-                                key={index}
                                 className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center"
                             >
-                                {skill}
+                                {skill.icon}
                             </motion.li>
                         )
                     })}
