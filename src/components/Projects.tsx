@@ -28,7 +28,6 @@ const myProjects = [{
 },
 ];
 
-
 const Projects = () => {
     const sections = useContext(NavigationContext);
 
