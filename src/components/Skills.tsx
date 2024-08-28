@@ -45,7 +45,7 @@ const Skills = () => {
                                 initial={{ x: -100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: index * 0.1 }}
-                                key={skill?.props?.className}
+                                key={index}
                                 className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center"
                             >
                                 {skill}
