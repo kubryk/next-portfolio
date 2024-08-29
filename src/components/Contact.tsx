@@ -34,6 +34,7 @@ const Contact = () => {
             variants={contactVariants}
             initial='hidden'
             whileInView='visible'
+            viewport={{ once: true }}
             ref={sections?.find(section => section.name === 'Contact')?.ref}>
             <Container className="flex flex-col items-center gap-6">
                 <h2 className="text-3xl font-bold text-center uppercase">Contact</h2>

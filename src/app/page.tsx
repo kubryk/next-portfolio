@@ -12,7 +12,7 @@ export default function Home() {
     <QueryClientProvider client={queryClient}>
       <main>
         <Hero />
-        <div className="flex flex-col xsm:gap-10 md:gap-28">
+        <div className="flex flex-col xsm:gap-10 md:gap-48">
           <Projects />
           <Skills />
           <Contact />

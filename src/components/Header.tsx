@@ -23,6 +23,7 @@ const Header = () => {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
+
                 className={cn('py-6 fixed w-screen backdrop-blur-md border-b-[1px] duration-1000 z-50', nav ? 'py-2' : '')}
             >
                 <div className="flex gap-6 justify-center items-center">
