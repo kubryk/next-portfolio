@@ -53,7 +53,10 @@ const Hero = () => {
                 >
                     <motion.h1 variants={textVariants} custom={1} className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">Hi, it&apos;s <span className=" text-indigo-500">Yaroslav</span></motion.h1>
                     <motion.h2 variants={textVariants} custom={2} className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">I&apos;m a <span className=" text-indigo-500">Full Stack Developer</span></motion.h2>
-                    <motion.p variants={textVariants} custom={3} className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">With a passion for developing modern React web apps for commercial businesses.</motion.p>
+                    <motion.p variants={textVariants} custom={3} className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">
+                        Driven by a passion for developing modern React web applications.
+                        {/* With a passion for developing modern React web apps for commercial businesses. */}
+                    </motion.p>
                     <MButton
                         variants={textVariants}
                         custom={4}

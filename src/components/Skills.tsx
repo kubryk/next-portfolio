@@ -79,7 +79,7 @@ const Skills = () => {
                             <motion.li
                                 variants={childVariants}
                                 key={skill.key}
-                                className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center"
+                                className=" w-[100px] h-[100px] border-[2px] rounded-md flex justify-center items-center"
                             >
                                 {skill.icon}
                             </motion.li>

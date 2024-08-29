@@ -10,23 +10,23 @@ import { MProjectItem } from "./ProjectItem";
 const myProjects = [{
     name: 'Personal Portfolio',
     description: 'Personal portfolio website built with React, Typescript, Tailwind CSS, Reach Hook Form.',
-    github: '/',
+    github: 'https://github.com/kubryk/next-portfolio',
     view: '/',
-    image: '/'
+    image: '/next-portfolio.jpg'
 },
 {
     name: 'Content Managment System',
     description: 'CMS built with Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui and Supabase.',
     github: '/',
     view: '/',
-    image: '/'
+    image: '/next-portfolio.jpg'
 },
 {
-    name: 'E-commerce',
+    name: 'Rust Game Server Website',
     description: 'E-commerce website built with Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui and MongoDB.',
     github: '/',
     view: '/',
-    image: '/'
+    image: '/next-portfolio.jpg'
 }];
 
 
