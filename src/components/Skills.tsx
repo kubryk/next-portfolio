@@ -9,7 +9,7 @@ import { BsFiletypeScss } from "react-icons/bs";
 
 import { useContext } from "react";
 import { NavigationContext } from "@/context/NavigationContext";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 
 
 const skills = [
@@ -29,97 +29,63 @@ const skills = [
     { key: 14, icon: <SiReacthookform className=" text-pink-600" size={50} /> }
 ]
 
+const skillsVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            when: 'beforeChildren',
+            duration: 0.5,
+            staggerChildren: 0.2
+        }
+    },
+}
+
+const childVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+    },
+    hover: {
+        scale: 1.1
+    }
+}
+
 const Skills = () => {
     const sections = useContext(NavigationContext);
 
     return (
         <section ref={sections?.find(section => section.name === 'Skills')?.ref}>
             <Container className="flex flex-col items-center gap-6">
+                <motion.h2
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-3xl font-bold text-center uppercase">Skills</motion.h2>
+                <motion.ul
+                    variants={skillsVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
 
-                <h2 className="text-3xl font-bold text-center uppercase">Skills</h2>
-                <ul className="grid xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 gap-5">
-
+                    className="grid xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 gap-5"
+                >
                     {skills.map((skill, index) => {
                         return (
                             <motion.li
+                                variants={childVariants}
                                 key={skill.key}
-                                initial={{ x: -100, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: index * 0.1 }}
                                 className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center"
                             >
                                 {skill.icon}
                             </motion.li>
                         )
                     })}
-
-                    {/* <motion.li
-                        initial={{ x: '-100vh' }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
-
-                        className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center "
-                    >
-                        <TbBrandTypescript className=" text-cyan-400" size={50} />
-                    </motion.li>
-                    <motion.li
-                        initial={{ x: '-50vh' }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center "
-                    >
-                        <FaNodeJs className=" text-green-500" size={50} />
-                    </motion.li>
-
-
-                    <motion.li
-                        initial={{ x: '-50vh' }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center "
-                    >
-                        <RiReactjsLine className=" text-cyan-400" size={50} />
-                    </motion.li>
-
-                    <motion.li
-                        initial={{ x: '-50vh' }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center"
-                    >
-                        <SiNextdotjs size={50} />
-                    </motion.li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center ">
-                        <RiHtml5Fill className=" text-orange-600" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center ">
-                        <FaCss3Alt className=" text-cyan-500" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center ">
-                        <BsFiletypeScss className=" text-pink-400" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <RiTailwindCssFill className=" text-cyan-400" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <SiRedux className=" text-purple-600" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <SiReactquery className=" text-red-500" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <BiLogoPostgresql className=" text-cyan-400" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <SiMongodb className=" text-green-500" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <BiLogoGit className=" text-orange-600" size={50} />
-                    </li>
-                    <li className=" w-[100px] h-[100px] border-[1px] rounded-md flex justify-center items-center">
-                        <SiReacthookform className=" text-pink-600" size={50} />
-                    </li> */}
-                </ul>
+                </motion.ul>
             </Container>
         </section>
     );

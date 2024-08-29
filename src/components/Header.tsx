@@ -2,13 +2,9 @@
 import { useContext, useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { NavigationContext } from "@/context/NavigationContext";
+import { motion } from 'framer-motion';
 
-const navLinks = [{
-    name: 'About',
-
-}]
 
 const Header = () => {
     const sections = useContext(NavigationContext)
@@ -23,7 +19,12 @@ const Header = () => {
 
     return (
         <header>
-            <nav className={cn('py-6 fixed w-screen backdrop-blur-md border-b-[1px] duration-1000 z-50', nav ? 'py-2' : '')}>
+            <motion.nav
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className={cn('py-6 fixed w-screen backdrop-blur-md border-b-[1px] duration-1000 z-50', nav ? 'py-2' : '')}
+            >
                 <div className="flex gap-6 justify-center items-center">
                     <ul className="flex justify-center gap-6 text-[15px] uppercase">
                         {sections && sections.map(section => {
@@ -39,7 +40,7 @@ const Header = () => {
                     </ul>
                     <ThemeToggle />
                 </div>
-            </nav>
+            </motion.nav>
         </header>
     );
 }

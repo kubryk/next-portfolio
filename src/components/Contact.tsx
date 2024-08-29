@@ -2,20 +2,39 @@
 import { cn } from "@/lib/utils";
 //Components
 import Container from "./Container";
-import Button from './ui/Button';
+import { MButton } from './ui/Button';
 import { PulseLoader } from "react-spinners";
 //Hooks
 import useContactForm from '../hooks/useContactForm';
 import { useContext } from 'react';
 import { NavigationContext } from '@/context/NavigationContext';
+import { motion } from 'framer-motion';
 
+const contactVariants = {
+    hidden: {
+        opacity: 0,
+        y: 100
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.7,
+            delay: 0.8
+        }
+    }
+}
 
 const Contact = () => {
     const { form: { register, formState, handleSubmit }, onSubmit, sendMessage } = useContactForm();
     const sections = useContext(NavigationContext);
 
     return (
-        <section ref={sections?.find(section => section.name === 'Contact')?.ref}>
+        <motion.section
+            variants={contactVariants}
+            initial='hidden'
+            whileInView='visible'
+            ref={sections?.find(section => section.name === 'Contact')?.ref}>
             <Container className="flex flex-col items-center gap-6">
                 <h2 className="text-3xl font-bold text-center uppercase">Contact</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-5 items-center' >
@@ -42,12 +61,12 @@ const Contact = () => {
                     />
                     {formState.errors.message && <span className=" text-red-600">{formState.errors.message.message}</span>}
 
-                    <Button disabled={sendMessage.isPending}>
+                    <MButton disabled={sendMessage.isPending}>
                         {sendMessage.isPending ? <PulseLoader color="white" size={20} /> : 'Send'}
-                    </Button>
+                    </MButton>
                 </form>
             </Container>
-        </section>
+        </motion.section>
     );
 }
 

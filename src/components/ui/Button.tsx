@@ -1,14 +1,18 @@
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ForwardedRef, forwardRef } from "react";
+import { motion } from 'framer-motion';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { }
 
-const Button = ({ children, className }: ButtonProps) => {
+const Button = ({ children, className }: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
     return (
-        <button className={cn('py-3 px-16 bg-indigo-600 rounded-xl text-white text-lg flex items-center justify-center', className)}>
+        <button
+            ref={ref}
+            className={cn('py-3 px-16 bg-indigo-600 rounded-xl text-white text-lg flex items-center justify-center', className)}
+        >
             {children}
         </button>
     )
 }
 
-export default Button;
+export const MButton = motion(forwardRef(Button));
