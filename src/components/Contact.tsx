@@ -62,7 +62,9 @@ const Contact = () => {
                     />
                     {formState.errors.message && <span className=" text-red-600">{formState.errors.message.message}</span>}
 
-                    <MButton disabled={sendMessage.isPending}>
+                    <MButton
+                        whileHover={{ scale: 1.1 }}
+                        disabled={sendMessage.isPending}>
                         {sendMessage.isPending ? <PulseLoader color="white" size={20} /> : 'Send'}
                     </MButton>
                 </form>

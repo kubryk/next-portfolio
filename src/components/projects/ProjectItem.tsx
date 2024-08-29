@@ -15,7 +15,7 @@ const ProjectItem = ({ project }: { project: IProject }, ref: ForwardedRef<HTMLL
     return (
         <li
             ref={ref}
-            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between"
+            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between shadow-xl"
         >
             <div className="flex flex-col gap-1">
                 <div className="flex items-center justify-center">
@@ -32,8 +32,8 @@ const ProjectItem = ({ project }: { project: IProject }, ref: ForwardedRef<HTMLL
             </div>
 
             <span className="flex gap-3 text-sm">
-                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-white w-1/2 text-center" target='_blank' href={project.github}>Github</Link>
-                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-white w-1/2 text-center" target='_blank' href={project.view}>View</Link>
+                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-indigo-100 w-1/2 text-center" target='_blank' href={project.github}>Github</Link>
+                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-indigo-100 w-1/2 text-center" target='_blank' href={project.view}>View</Link>
             </span>
 
         </li>

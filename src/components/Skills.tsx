@@ -9,7 +9,7 @@ import { BsFiletypeScss } from "react-icons/bs";
 
 import { useContext } from "react";
 import { NavigationContext } from "@/context/NavigationContext";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const skills = [
@@ -29,6 +29,21 @@ const skills = [
     { key: 14, icon: <SiReacthookform className=" text-pink-600" size={50} /> }
 ]
 
+const titleVariants = {
+    hidden: {
+        opacity: 0,
+        y: 100
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.7,
+            delay: 0.8
+        }
+    }
+}
+
 const skillsVariants = {
     hidden: {
         opacity: 0,
@@ -40,7 +55,7 @@ const skillsVariants = {
             duration: 0.5,
             staggerChildren: 0.2
         }
-    },
+    }
 }
 
 const childVariants = {
@@ -62,19 +77,22 @@ const Skills = () => {
         <section ref={sections?.find(section => section.name === 'Skills')?.ref}>
             <Container className="flex flex-col items-center gap-6">
                 <motion.h2
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    variants={titleVariants}
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true }}
-                    className="text-3xl font-bold text-center uppercase">Skills</motion.h2>
+                    className="text-3xl font-bold text-center uppercase"
+                >
+                    Skills
+                </motion.h2>
                 <motion.ul
                     variants={skillsVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-
                     className="grid xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 gap-5"
                 >
-                    {skills.map((skill, index) => {
+                    {skills.map(skill => {
                         return (
                             <motion.li
                                 variants={childVariants}
