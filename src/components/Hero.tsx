@@ -59,6 +59,13 @@ const Hero = () => {
                         custom={4}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.5 }}
+                        onClick={() => {
+                            const contactSection = sections?.find(section => section.name === 'Contact')?.ref;
+                            if (contactSection && contactSection.current) {
+                                const y = contactSection.current.getBoundingClientRect().top + window.scrollY - 70;
+                                window.scrollTo({ top: y, behavior: 'smooth' });
+                            }
+                        }}
                     >
                         Hire me
                     </MButton>
@@ -85,7 +92,7 @@ const Hero = () => {
                 </div> */}
 
             </Container>
-        </section>
+        </section >
     );
 }
 
