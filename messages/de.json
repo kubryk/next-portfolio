@@ -1,0 +1,52 @@
+{
+    "Hero": {
+        "name": "Hallo, ich bin Yaroslav",
+        "profession": "Ich bin ein Full-Stack-Entwickler",
+        "description": "Angetrieben von der Leidenschaft, moderne React-Webanwendungen zu entwickeln.",
+        "button": "Stellen Sie mich ein"
+    },
+    "Navigation": {
+        "About": "Über",
+        "Projects": "Projekte",
+        "Skills": "Fähigkeiten",
+        "Contact": "Kontakt"
+    },
+    "Projects": {
+        "title": "Projekte",
+        "liveBtn": "Live",
+        "items": [{
+            "name": "Persönliches Portfolio",
+            "description": "Persönliche Portfolio-Website, erstellt mit React, Typescript, Tailwind CSS, Reach Hook Form."
+        },
+        {
+            "name": "Content-Management-System",
+            "description": "CMS erstellt mit Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui und Supabase."
+        },
+        {
+            "name": "Rust Game Server Website",
+            "description": "E-Commerce-Website, erstellt mit Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui und MongoDB."
+        }]
+    },
+    "Skills": {
+        "title": "Fähigkeiten"
+    },
+    "Contacts": {
+        "title": "Kontakte",
+        "form": {
+            "name": "Name",
+            "email": "E-Mail",
+            "message": "Nachricht",
+            "button": "Senden"
+        }
+    },
+    "Footer": {
+        "description": "© 2022 Yaroslav. Alle Rechte vorbehalten."
+    },
+    "Errors": {
+        "nameMin": "Der Name muss mindestens ein Zeichen lang sein.",
+        "nameMax": "Der Name kann maximal 50 Zeichen lang sein.",
+        "invalidEmail": "Ungültige E-Mail-Adresse.",
+        "messageMin": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
+        "messageMax": "Die Nachricht kann maximal 1000 Zeichen lang sein."
+    }
+}

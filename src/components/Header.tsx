@@ -4,11 +4,17 @@ import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import { NavigationContext } from "@/context/NavigationContext";
 import { motion } from 'framer-motion';
-
+// import { Language } from "./Language";
+// import { useRouter } from "next/router";
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import { Language } from "./Language";
 
 const Header = () => {
     const sections = useContext(NavigationContext)
     const [nav, setNav] = useState(false);
+    const translate = useTranslations("Navigation");
+
 
     const handleScroll = () => window.scrollY >= 62 ? setNav(true) : setNav(false);
 
@@ -35,11 +41,14 @@ const Header = () => {
                                         const y = section.ref.current.getBoundingClientRect().top + window.scrollY - 70;
                                         window.scrollTo({ top: y, behavior: 'smooth' });
                                     }
-                                }}>{section.name}</li>
+                                }}>
+                                    {translate(section.name)}
+                                </li>
                             )
                         })}
                     </ul>
                     <ThemeToggle />
+                    <Language />
                 </div>
             </motion.nav>
         </header>
@@ -47,3 +56,5 @@ const Header = () => {
 }
 
 export default Header;
+
+

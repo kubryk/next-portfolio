@@ -1,6 +1,5 @@
 'use client'
 import { createContext, MutableRefObject, ReactNode, useRef } from 'react';
-
 interface INavigationContext {
     name: string
     ref: MutableRefObject<HTMLDivElement | null>

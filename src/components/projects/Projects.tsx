@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { NavigationContext } from "@/context/NavigationContext";
 import { motion } from "framer-motion";
 import { MProjectItem } from "./ProjectItem";
+import { useTranslations } from "next-intl";
 
 
 const myProjects = [{
@@ -58,6 +59,7 @@ const childVariants = {
 
 const Projects = () => {
     const sections = useContext(NavigationContext);
+    const translate = useTranslations('Projects');
 
     return (
         <section
@@ -68,7 +70,7 @@ const Projects = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl font-bold text-center uppercase">Projects</motion.h2>
+                    className="text-3xl font-bold text-center uppercase">{translate('title')}</motion.h2>
                 <motion.ul
                     variants={projectsVariants}
                     initial='hidden'
@@ -76,9 +78,10 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="flex flex-wrap justify-center gap-4 py-4 text-[20px]"
                 >
-                    {myProjects && myProjects.map(project => {
+                    {myProjects && myProjects.map((project, index) => {
                         return (
                             <MProjectItem
+                                index={index}
                                 variants={childVariants}
                                 key={project.name}
                                 project={project}

@@ -1,0 +1,52 @@
+{
+    "Hero": {
+        "name": "Привіт, це Ярослав",
+        "profession": "Я full stack розробник",
+        "description": "Захоплений розробкою сучасних веб-додатків на React.",
+        "button": "Найняти мене"
+    },
+    "Navigation": {
+        "About": "Про мене",
+        "Projects": "Проекти",
+        "Skills": "Навички",
+        "Contact": "Контакт"
+    },
+    "Projects": {
+        "title": "Проекти",
+        "liveBtn": "Наживо",
+        "items": [{
+            "name": "Особисте портфоліо",
+            "description": "Особистий веб-сайт портфоліо, створений за допомогою React, Typescript, Tailwind CSS, Reach Hook Form."
+        },
+        {
+            "name": "Система управління контентом",
+            "description": "CMS, створена за допомогою Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui та Supabase."
+        },
+        {
+            "name": "Веб-сайт ігрового сервера Rust",
+            "description": "Веб-сайт електронної комерції, створений за допомогою Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui та MongoDB."
+        }]
+    },
+    "Skills": {
+        "title": "Навички"
+    },
+    "Contacts": {
+        "title": "Контакти",
+        "form": {
+            "name": "Ім'я",
+            "email": "Електронна пошта",
+            "message": "Повідомлення",
+            "button": "Надіслати"
+        }
+    },
+    "Footer": {
+        "description": "© 2022 Ярослав. Всі права захищені."
+    },
+    "Errors": {
+        "nameMin": "Ім'я повинно бути довжиною принаймні один символ.",
+        "nameMax": "Ім'я може бути довжиною не більше 50 символів.",
+        "invalidEmail": "Недійсна адреса електронної пошти.",
+        "messageMin": "Повідомлення повинно бути довжиною принаймні 10 символів.",
+        "messageMax": "Повідомлення може бути довжиною не більше 1000 символів."
+    }
+}

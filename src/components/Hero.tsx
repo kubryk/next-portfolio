@@ -1,12 +1,14 @@
 'use client'
 import Container from "./Container";
 import Image from "next/image";
-import Link from "next/link";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { delay, motion } from "framer-motion"
-import { MButton } from "./ui/Button";
+import { MButton } from "./ui/MButton";
 import { NavigationContext } from "@/context/NavigationContext";
 import { useContext } from "react";
+// import { useTranslation } from "react-i18next";
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+
 
 const textVariants = {
     hidden: {
@@ -40,6 +42,8 @@ const heroVariants = {
 
 const Hero = () => {
     const sections = useContext(NavigationContext);
+    const translate = useTranslations('Hero');
+
 
     return (
         <section ref={sections?.find(section => section.name === 'About')?.ref} className="h-screen p">
@@ -51,11 +55,21 @@ const Hero = () => {
                     animate='visible'
                     initial='hidden'
                 >
-                    <motion.h1 variants={textVariants} custom={1} className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">Hi, it&apos;s <span className=" text-indigo-500">Yaroslav</span></motion.h1>
-                    <motion.h2 variants={textVariants} custom={2} className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">I&apos;m a <span className=" text-indigo-500">Full Stack Developer</span></motion.h2>
+                    <motion.h1
+                        variants={textVariants}
+                        custom={1}
+                        className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl"
+                    >
+                        {/* Hi, it&apos;s <span className=" text-indigo-500">Yaroslav</span>  */}
+                        {translate('name')}
+                    </motion.h1>
+                    <motion.h2 variants={textVariants} custom={2} className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">
+                        {/* I&apos;m a <span className=" text-indigo-500">Full Stack Developer</span> */}
+                        {translate('profession')}
+                    </motion.h2>
                     <motion.p variants={textVariants} custom={3} className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">
-                        Driven by a passion for developing modern React web applications.
-                        {/* With a passion for developing modern React web apps for commercial businesses. */}
+                        {/* Driven by a passion for developing modern React web applications. */}
+                        {translate('description')}
                     </motion.p>
                     <MButton
                         variants={textVariants}
@@ -70,7 +84,7 @@ const Hero = () => {
                             }
                         }}
                     >
-                        Hire me
+                        {translate('button')}
                     </MButton>
                 </motion.div>
                 <motion.div

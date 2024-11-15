@@ -6,13 +6,21 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form"
 
 import Swal from 'sweetalert2'
+import { useTranslations } from "next-intl";
 
 const useContactForm = () => {
+    const translate = useTranslations('Errors');  // Використовуємо ключ для перекладу помилок
+
     const ContactSchema = z.object({
-        name: z.string().min(1, { message: 'Name must be at least one character long.' }).max(50, { message: 'Name can be 50 characters long.' }),
-        email: z.string().email({ message: 'Invalid email address.' }),
-        message: z.string().min(10, { message: 'Message must be at least 10 characters long.' }).max(1000, { message: 'Message can be 1000 characters long.' }),
-    })
+        name: z.string()
+            .min(1, { message: translate('nameMin') }) // Переклад для мінімальної довжини
+            .max(50, { message: translate('nameMax') }), // Переклад для максимальної довжини
+        email: z.string()
+            .email({ message: translate('invalidEmail') }), // Переклад для неправильного email
+        message: z.string()
+            .min(10, { message: translate('messageMin') }) // Переклад для мінімальної довжини повідомлення
+            .max(1000, { message: translate('messageMax') }), // Переклад для максимальної довжини повідомлення
+    });
 
     const form = useForm<z.infer<typeof ContactSchema>>({
         resolver: zodResolver(ContactSchema),

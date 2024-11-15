@@ -10,6 +10,7 @@ import { BsFiletypeScss } from "react-icons/bs";
 import { useContext } from "react";
 import { NavigationContext } from "@/context/NavigationContext";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 
 const skills = [
@@ -72,6 +73,7 @@ const childVariants = {
 
 const Skills = () => {
     const sections = useContext(NavigationContext);
+    const translation = useTranslations('Skills');
 
     return (
         <section ref={sections?.find(section => section.name === 'Skills')?.ref}>
@@ -83,7 +85,7 @@ const Skills = () => {
                     viewport={{ once: true }}
                     className="text-3xl font-bold text-center uppercase"
                 >
-                    Skills
+                    {translation('title')}
                 </motion.h2>
                 <motion.ul
                     variants={skillsVariants}

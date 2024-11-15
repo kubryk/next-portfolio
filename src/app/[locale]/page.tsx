@@ -5,9 +5,10 @@ import Projects from "@/components/projects/Projects";
 import Skills from "@/components/Skills";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+
 const queryClient = new QueryClient();
 
-export default function Home() {
+function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <main>
@@ -21,3 +22,5 @@ export default function Home() {
     </QueryClientProvider>
   );
 }
+
+export default Home;

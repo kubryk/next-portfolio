@@ -1,0 +1,52 @@
+{
+    "Hero": {
+        "name": "Hola, soy Yaroslav",
+        "profession": "Soy un desarrollador full stack",
+        "description": "Impulsado por una pasión por desarrollar aplicaciones web modernas con React.",
+        "button": "Contrátame"
+    },
+    "Navigation": {
+        "About": "Acerca de",
+        "Projects": "Proyectos",
+        "Skills": "Habilidades",
+        "Contact": "Contacto"
+    },
+    "Projects": {
+        "title": "Proyectos",
+        "liveBtn": "En vivo",
+        "items": [{
+            "name": "Portafolio Personal",
+            "description": "Sitio web de portafolio personal construido con React, Typescript, Tailwind CSS, Reach Hook Form."
+        },
+        {
+            "name": "Sistema de Gestión de Contenidos",
+            "description": "CMS construido con Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui y Supabase."
+        },
+        {
+            "name": "Sitio Web del Servidor de Juegos Rust",
+            "description": "Sitio web de comercio electrónico construido con Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui y MongoDB."
+        }]
+    },
+    "Skills": {
+        "title": "Habilidades"
+    },
+    "Contacts": {
+        "title": "Contactos",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "message": "Mensaje",
+            "button": "Enviar"
+        }
+    },
+    "Footer": {
+        "description": "© 2022 Yaroslav. Todos los derechos reservados."
+    },
+    "Errors": {
+        "nameMin": "El nombre debe tener al menos un carácter.",
+        "nameMax": "El nombre puede tener como máximo 50 caracteres.",
+        "invalidEmail": "Dirección de correo electrónico no válida.",
+        "messageMin": "El mensaje debe tener al menos 10 caracteres.",
+        "messageMax": "El mensaje puede tener como máximo 1000 caracteres."
+    }
+}

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link"
 import { ForwardedRef, forwardRef } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface IProject {
     name: string;
@@ -11,7 +12,9 @@ interface IProject {
     image: string;
 }
 
-const ProjectItem = ({ project }: { project: IProject }, ref: ForwardedRef<HTMLLIElement>) => {
+const ProjectItem = ({ project, index }: { project: IProject, index: number }, ref: ForwardedRef<HTMLLIElement>) => {
+    const translate = useTranslations('Projects');
+
     return (
         <li
             ref={ref}
@@ -27,13 +30,13 @@ const ProjectItem = ({ project }: { project: IProject }, ref: ForwardedRef<HTMLL
                         height={300}
                     />
                 </div>
-                <h3 className="text-xl font-bold">{project.name}</h3>
-                <p className="text-sm max-w-[300px]">{project.description}</p>
+                <h3 className="text-xl font-bold">{translate(`items.${index}.name`)}</h3>
+                <p className="text-sm max-w-[300px]">{translate(`items.${index}.description`)}</p>
             </div>
 
             <span className="flex gap-3 text-sm">
                 <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-indigo-100 w-1/2 text-center" target='_blank' href={project.github}>Github</Link>
-                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-indigo-100 w-1/2 text-center" target='_blank' href={project.view}>View</Link>
+                <Link className=" duration-500 font-extrabold bg-indigo-600 p-2 rounded-xl text-indigo-100 w-1/2 text-center" target='_blank' href={project.view}>{translate('liveBtn')}</Link>
             </span>
 
         </li>

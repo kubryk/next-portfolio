@@ -1,0 +1,54 @@
+{
+    "Hero": {
+        "name": "Hi, it's Yaroslav",
+        "profession": "I'm a full stack developer",
+        "description": "Driven by a passion for developing modern React web applications.",
+        "button": "Hire me"
+    },
+    "Navigation": {
+        "About": "About",
+        "Projects": "Projects",
+        "Skills": "Skills",
+        "Contact": "Contact"
+    },
+    "Projects": {
+        "title": "Projects",
+        "liveBtn": "Live",
+        "items": [
+            {
+                "name": "Personal Portfolio",
+                "description": "Personal portfolio website built with React, Typescript, Tailwind CSS, Reach Hook Form."
+            },
+            {
+                "name": "Content Management System",
+                "description": "CMS built with Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui and Supabase."
+            },
+            {
+                "name": "Rust Game Server Website",
+                "description": "E-commerce website built with Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui and MongoDB."
+            }
+        ]
+    },
+    "Skills": {
+        "title": "Skills"
+    },
+    "Contacts": {
+        "title": "Contacts",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "button": "Send"
+        }
+    },
+    "Footer": {
+        "description": "© 2022 Yaroslav. All rights reserved."
+    },
+    "Errors": {
+        "nameMin": "Name must be at least one character long.",
+        "nameMax": "Name can be at most 50 characters long.",
+        "invalidEmail": "Invalid email address.",
+        "messageMin": "Message must be at least 10 characters long.",
+        "messageMax": "Message can be at most 1000 characters long."
+    }
+}
