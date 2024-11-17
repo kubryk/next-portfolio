@@ -33,7 +33,7 @@ const Header = () => {
                 className={cn('py-6 fixed w-screen backdrop-blur-md border-b-[1px] duration-1000 z-50', nav ? 'py-2' : '')}
             >
                 <div className="flex gap-6 justify-center items-center">
-                    <ul className="flex justify-center gap-6 text-[15px] uppercase">
+                    <ul className="flex justify-center gap-4 md:gap-6 text-[15px] uppercase">
                         {sections && sections.map(section => {
                             return (
                                 <li key={section.name} className=" cursor-pointer" onClick={() => {

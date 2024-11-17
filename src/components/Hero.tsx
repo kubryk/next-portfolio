@@ -47,7 +47,7 @@ const Hero = () => {
 
     return (
         <section ref={sections?.find(section => section.name === 'About')?.ref} className="h-screen p">
-            <Container className="flex flex-col items-center pt-20 w-full md:flex-row md:gap-5 md:justify-evenly">
+            <Container className="flex flex-col items-center pt-40 w-full md:flex-row md:gap-5 md:justify-evenly">
 
                 <motion.div
                     className="flex flex-col gap-3 p-3"
@@ -60,15 +60,12 @@ const Hero = () => {
                         custom={1}
                         className="xsm:text-center sm:text-center md:text-left text-[50px] font-extrabold xsm:text-4xl sm:text-5xl md:text-5xl lg:text-6xl"
                     >
-                        {/* Hi, it&apos;s <span className=" text-indigo-500">Yaroslav</span>  */}
                         {translate('name')}
                     </motion.h1>
                     <motion.h2 variants={textVariants} custom={2} className="xsm:text-center sm:text-center md:text-left text-[20px] font-extrabold uppercase xsm:text-lg">
-                        {/* I&apos;m a <span className=" text-indigo-500">Full Stack Developer</span> */}
                         {translate('profession')}
                     </motion.h2>
                     <motion.p variants={textVariants} custom={3} className="xsm:text-center sm:text-center md:text-left max-w-[300px] font-bold">
-                        {/* Driven by a passion for developing modern React web applications. */}
                         {translate('description')}
                     </motion.p>
                     <MButton

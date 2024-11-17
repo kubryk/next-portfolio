@@ -18,10 +18,10 @@ const ProjectItem = ({ project, index }: { project: IProject, index: number }, r
     return (
         <li
             ref={ref}
-            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between shadow-xl max-w-[350px]"
+            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between shadow-xl w-[350px]"
         >
             <div className="flex flex-col gap-1">
-                <div className="relative flex items-center justify-center w-[300px] h-[200px] overflow-hidden">
+                <div className="relative flex items-center justify-center w-full h-[200px] overflow-hidden">
                     <Image
                         className=" rounded-xl object-cover"
                         fill
