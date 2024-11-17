@@ -47,7 +47,7 @@ const Hero = () => {
 
     return (
         <section ref={sections?.find(section => section.name === 'About')?.ref} className="h-screen p">
-            <Container className="flex flex-col items-center pt-40 w-full md:flex-row md:gap-5 md:justify-evenly">
+            <Container className="flex flex-col items-center pt-40 md:pt-20 w-full md:flex-row md:gap-5 md:justify-evenly">
 
                 <motion.div
                     className="flex flex-col gap-3 p-3"
