@@ -8,27 +8,36 @@ import { MProjectItem } from "./ProjectItem";
 import { useTranslations } from "next-intl";
 
 
-const myProjects = [{
-    name: 'Personal Portfolio',
-    description: 'Personal portfolio website built with React, Typescript, Tailwind CSS, Reach Hook Form.',
-    github: 'https://github.com/kubryk/next-portfolio',
-    view: '/',
-    image: '/next-portfolio.jpg'
-},
-{
-    name: 'Content Managment System',
-    description: 'CMS built with Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui and Supabase.',
-    github: '/',
-    view: '/',
-    image: '/next-portfolio.jpg'
-},
-{
-    name: 'Rust Game Server Website',
-    description: 'E-commerce website built with Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui and MongoDB.',
-    github: '/',
-    view: '/',
-    image: '/next-portfolio.jpg'
-}];
+const myProjects = [
+    {
+        name: 'Personal Portfolio',
+        description: 'Personal portfolio website built with React, Typescript, Tailwind CSS, Reach Hook Form.',
+        github: 'https://github.com/kubryk/next-portfolio',
+        view: '/',
+        image: '/next-portfolio.jpg'
+    },
+    {
+        name: 'Content Managment System',
+        description: 'CMS built with Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui and Supabase.',
+        github: 'https://github.com/kubryk/nextjs-supabase-CMS',
+        view: 'https://nextjs-supabase-cms.vercel.app',
+        image: '/next-cms.jpg'
+    },
+    // {
+    //     name: 'Rust Game Server Website',
+    //     description: 'E-commerce website built with Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui and MongoDB.',
+    //     github: '/',
+    //     view: '/',
+    //     image: '/next-rust.jpg'
+    // },
+    {
+        name: 'Wordpress Headless Dentist Website',
+        description: 'Wordpress headless dentist website built with Next.js, React, Three.js, React Three Fiber, Typescript, Tailwind CSS, shadcn/ui and Framer Motion',
+        github: '/',
+        view: 'next-dentist-two.vercel.app',
+        image: '/next-dentist.jpg'
+    }
+];
 
 
 const projectsVariants = {
@@ -76,7 +85,7 @@ const Projects = () => {
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true }}
-                    className="flex flex-wrap justify-center gap-4 py-4 text-[20px]"
+                    className="flex flex-wrap justify-center gap-10 py-4 text-[20px]"
                 >
                     {myProjects && myProjects.map((project, index) => {
                         return (

@@ -23,9 +23,10 @@
             "description": "CMS erstellt mit Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui und Supabase."
         },
         {
-            "name": "Rust Game Server Website",
-            "description": "E-Commerce-Website, erstellt mit Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui und MongoDB."
-        }]
+            "name": "Headless Wordpress Zahnarzt Blog",
+            "description": "Headless Wordpress Zahnarzt Blog, erstellt mit Next.js, React, Three.js, React Three Fiber, Typescript, Tailwind CSS, shadcn/ui und Framer Motion"
+        }
+    ]
     },
     "Skills": {
         "title": "Fähigkeiten"

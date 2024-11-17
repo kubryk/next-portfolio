@@ -23,8 +23,8 @@
             "description": "CMS, створена за допомогою Next.js, React, Typescript, Tailwind CSS, Redux, React Hook Form, Zod, shadcn/ui та Supabase."
         },
         {
-            "name": "Веб-сайт ігрового сервера Rust",
-            "description": "Веб-сайт електронної комерції, створений за допомогою Next.js, React, Typescript, Tailwind CSS, TanStack Query, React Hook Form, Zod, shadcn/ui та MongoDB."
+            "name": "Headless Wordpress веб-сайт стоматолога",
+            "description": "Headless Wordpress веб-сайт стоматолога, побудований за допомогою Next.js, React, Three.js, React Three Fiber, Typescript, Tailwind CSS, shadcn/ui та Framer Motion"
         }]
     },
     "Skills": {

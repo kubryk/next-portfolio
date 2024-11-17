@@ -18,16 +18,15 @@ const ProjectItem = ({ project, index }: { project: IProject, index: number }, r
     return (
         <li
             ref={ref}
-            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between shadow-xl"
+            className="flex flex-col gap-4 border-[2px] dark:bg-transparent dark:border-[2px] rounded-xl p-4 justify-between shadow-xl max-w-[350px]"
         >
             <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-center">
+                <div className="relative flex items-center justify-center w-[300px] h-[200px] overflow-hidden">
                     <Image
-                        className=" rounded-xl"
+                        className=" rounded-xl object-cover"
+                        fill
                         src={project.image}
                         alt="My project"
-                        width={270}
-                        height={300}
                     />
                 </div>
                 <h3 className="text-xl font-bold">{translate(`items.${index}.name`)}</h3>
